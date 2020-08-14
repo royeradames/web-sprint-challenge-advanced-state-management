@@ -3,10 +3,17 @@ import React from 'react';
 export function SmurfUI(props){
 
     return(
-        <h3>
-            Name: {props.name}
-        </h3>
-        
+        <section>
+            <h3>
+                Name: {props.name}
+            </h3>
+            <p>
+                Age: {props.age}
+            </p>
+            <p>
+                Height: {props.height}
+            </p>
+        </section>
     )
 }
 
