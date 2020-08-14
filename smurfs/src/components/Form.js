@@ -7,11 +7,12 @@ export function Form(props) {
         name: "",
         age: '',
         height: "",
+        
     })
     const handleChange = (e) => {
         setMember({
             ...member,
-            [e.target.name]: e.target.value
+            [e.target.name]: e.target.name === 'age'? Number.parseInt(e.target.value) :e.target.value
         })
     }
     const handleSubmit = (e) => {
@@ -26,7 +27,7 @@ export function Form(props) {
     return (
         <section>
             <h2>
-                Become a new membera
+                Become a new member
             </h2>
             <form onSubmit={handleSubmit}>
                 <input 
@@ -40,6 +41,7 @@ export function Form(props) {
                     placeholder='Age'
                     onChange={handleChange}
                     value={member.age}
+                    type='number'
                 />
                 <input 
                     name='height'

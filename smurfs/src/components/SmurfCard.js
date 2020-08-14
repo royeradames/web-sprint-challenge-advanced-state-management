@@ -6,6 +6,7 @@ import {connect} from 'react-redux'
 export function SmurfCard(props){
     const {state} = props
     const listOfSmurfs = state
+    debugger
     return(
         <section>
             <h2>
