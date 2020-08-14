@@ -12,10 +12,8 @@ export const reducer = (state = initialState, action) => {
     debugger
     switch(action.type){
         case MEMBER_SUCCESS:
-            return[
-                ...state,
-                action.payload.newMember
-            ]
+            return action.payload.newMember
+            
         case MEMBER_GET:
             debugger
             return action.payload.SmurfList
