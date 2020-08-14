@@ -2,14 +2,19 @@
 // API http://localhost:3333/smurfs
 import React, { Component } from "react";
 import "./App.css";
+
+//components
+import Form from './Form'
+import SmurfCard from './SmurfCard'
 class App extends Component {
   render() {
     return (
       <div className="App">
         <h1>SMURFS! W/Redux</h1>
-        <div>Welcome to your state management version of Smurfs!</div>
-        <div>Start inside of your `src/index.js` file!</div>
+        <div>Welcome to the Smurfs Village!</div>
         <div>Have fun!</div>
+        <Form/>
+        <SmurfCard/>
       </div>
     );
   }
