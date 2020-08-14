@@ -1,4 +1,4 @@
-// import { } from '../action'
+import {MEMBER_SUCCESS, MEMBER_FAIL } from '../action'
 
 const initialState = [{
     name: "Brainey",
@@ -9,7 +9,12 @@ const initialState = [{
 
 export const reducer = (state = initialState, action) => {
     switch(action.type){
-        case '':
+        case MEMBER_SUCCESS:
+            return{
+                ...state,
+                
+            }
+        case MEMBER_FAIL:
             return{
                 ...state,
                 

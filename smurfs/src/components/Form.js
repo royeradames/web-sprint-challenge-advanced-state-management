@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 //redux
 import { connect } from 'react-redux'
-
+import {addMember} from '../store/action/action'
 export function Form(props) {
-    const [user, setUser] = useState({
+    const [member, setMember] = useState({
         name: "",
         age: '',
         height: "",
     })
     const handleChange = (e) => {
-        setUser({
-            ...user,
+        setMember({
+            ...member,
             [e.target.name]: e.target.value
         })
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        props.addUser(user)
-        setUser({
+        props.addMember(member)
+        setMember({
             name: "",
             age: '',
             height: "",
@@ -33,19 +33,19 @@ export function Form(props) {
                     name='name'
                     placeholder='Name'
                     onChange={handleChange}
-                    value={user.name}
+                    value={member.name}
                 />
                 <input 
                     name='age'
                     placeholder='Age'
                     onChange={handleChange}
-                    value={user.age}
+                    value={member.age}
                 />
                 <input 
                     name='height'
                     placeholder='Height'
                     onChange={handleChange}
-                    value={user.height}
+                    value={member.height}
                 />
                 <button type='submit'>Become New Member</button>
             </form>
@@ -59,4 +59,4 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, {})(Form)
+export default connect(mapStateToProps, {addMember})(Form)
