@@ -1,6 +1,8 @@
 import React from 'react';
+//redux
+import {connect} from 'react-redux'
 
-export default function wForm(){
+export function Form(){
     return(
         <section>
             <h2>
@@ -15,3 +17,11 @@ export default function wForm(){
         </section>
     )
 }
+
+const mapStateToProps = (state) =>{
+    return{
+        state
+    }
+}
+
+export default connect(mapStateToProps, {})(Form)
