@@ -1,17 +1,17 @@
 import React from 'react';
 
-export function SmurfUI(props){
-
+export function SmurfUI({aSmurf}){
+    debugger
     return(
         <section>
             <h3>
-                Name: {props.name}
+                Name: {aSmurf.name}
             </h3>
             <p>
-                Age: {props.age}
+                Age: {aSmurf.age}
             </p>
             <p>
-                Height: {props.height}
+                Height: {aSmurf.height}
             </p>
         </section>
     )

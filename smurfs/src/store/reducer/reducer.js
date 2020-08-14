@@ -1,9 +1,9 @@
 // import { } from '../action'
 
 const initialState = [{
-    name: "",
-    age: 0,
-    height: "",
+    name: "Brainey",
+    age: 200,
+    height: "5cm",
     id: 0
 }]
 
