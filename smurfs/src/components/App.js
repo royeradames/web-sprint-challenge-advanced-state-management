@@ -1,3 +1,5 @@
+// https://github.com/royeradames/web-sprint-challenge-advanced-state-management
+// API http://localhost:3333/smurfs
 import React, { Component } from "react";
 import "./App.css";
 class App extends Component {
